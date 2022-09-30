@@ -1,7 +1,7 @@
 ﻿// Программа принимает на вход число и выдаёт сумму цифр в числе.
 Console.Clear();
 
-Console.Write("Введите положительное число: ");
+Console.Write("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 int summa = 0;
 

@@ -2,7 +2,7 @@
 Console.Clear();
 
 Console.Write("Введите пятизначное число: ");
-int number = int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine()!);
 
 int Digit1 = number/10000;
 int Digit2 = number%10000/1000;
