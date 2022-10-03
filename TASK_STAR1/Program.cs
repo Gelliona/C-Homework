@@ -10,7 +10,9 @@ PrintArray(array);
 
 int[] total = FindSequence(array);
 Console.WriteLine();
-Console.WriteLine($"Самая длинная последовательность включает {total[0]} элементов, начинается с индекса {total[2]} и состоит из чисел {total[1]}");
+Console.WriteLine($"Count: {total[0]}");
+Console.WriteLine($"Element: {total[1]}");
+Console.WriteLine($"Position: {total[2]}");
 
 
 void PrintArray(int[] array)
