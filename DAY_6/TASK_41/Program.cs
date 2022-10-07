@@ -2,7 +2,7 @@
 
 Console.Clear();
 
-Console.Write("Введите число: ");
+Console.Write("Введите количество чисел для ввода: ");
 int num = int.Parse(Console.ReadLine()!);
 int pozitiveCount = PositiveNumbers(num);
 Console.WriteLine(pozitiveCount);
@@ -28,6 +28,7 @@ int PositiveNumbers(int number, int i = 1, int counter = 0)     // Вариан�
         return counter;
     else
     {
+        Console.Write("Введите число: ");
         int newNumber = int.Parse(Console.ReadLine()!);
         if (newNumber > 0)
         {
