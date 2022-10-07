@@ -17,7 +17,6 @@ string BinaryConverting(int num, string mod = "", string binNum = "")
     }
     else
     {
-        //num = num / 2;
         mod = Convert.ToString(num % 2);
         binNum = mod + binNum ;
         return BinaryConverting(num/2, mod = "", binNum);
