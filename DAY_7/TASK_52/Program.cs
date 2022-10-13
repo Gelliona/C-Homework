@@ -57,8 +57,11 @@ double[] FindAverage(double[,] array, double summa = 0)
 
 void PrintAverage(double[] array)
 {
+    Console.Write($"Среднее арифметическое каждого столбца: ");
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]} ");
+        Console.Write($"{array[i]}");
+        if (i != array.Length - 1)
+        Console.Write($"; ");
     }
 }
