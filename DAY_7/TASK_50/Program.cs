@@ -53,10 +53,10 @@ void FillArray(int[,] array)
 
 bool FindNumber(int[,] array,int m, int n)
 {
-    if (m >= 0 &&
-        n >= 0 &&
-        m < array.GetLength(0) &&
-        n < array.GetLength(1))
+    if (m > 0 &&
+        n > 0 &&
+        m <= array.GetLength(0) &&
+        n <= array.GetLength(1))
     {
         return true;
     }
