@@ -14,7 +14,14 @@ int[,] array = new int[lengthGenerator.Next(2,10), lengthGenerator.Next(2,10)]; 
 FillArray(array);
 PrintArray(array);
 
-FindNumber(array, m, n);
+if (FindNumber(array, m, n))
+{
+    Console.WriteLine(array[m-1,n-1]);
+}
+else
+{
+    Console.WriteLine("Такого элемента в массиве нет");
+}
 
 
 void PrintArray(int[,] array)
@@ -43,23 +50,18 @@ void FillArray(int[,] array)
     }
 }
 
-void FindNumber(int[,] array,int m, int n)
+
+bool FindNumber(int[,] array,int m, int n)
 {
-    if ((m > array.GetLength(0)) || (n > array.GetLength(1)))
+    if (m >= 0 &&
+        n >= 0 &&
+        m < array.GetLength(0) &&
+        n < array.GetLength(1))
     {
-        Console.WriteLine("Такого числа в массиве нет");
+        return true;
     }
     else
     {
-        for (int i = 0; i < array.GetLength(0); i++)
-        {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                if(i==(m-1) && j==(n-1))
-                {
-                    Console.WriteLine(array[i,j]);
-                }
-            }
-        } 
+        return false;
     }
 }
